@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+<meta charset="UTF-8">
+<meta name="keywords" content="Krisztina Kozmetika, spa, salon, beauty, waxing, facial, peel">
+<meta name="description" content="The Krisztina Kozmetika Spa and Beauty Salon in Chapel Hill/Carrboro">
+<meta name="author" content="Silvana Goberdhan-Vigle">
+
+<link rel="stylesheet" href="style/kristina1.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:700,700italic,400,400italic,900,900italic' rel='stylesheet'>
+
+<title>Krisztina Kozmetika Spa | Contact </title>
+
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+
+
+<script>
+
+window.onload = function() {
+
+  //List of options that you can specify to modify the map
+
+  var mapOptions = {
+ mapTypeControlOptions: {
+    position: google.maps.ControlPosition.BOTTOM_CENTER,
+    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    },
+
+  
+    zoom: 18,
+  mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+
+  };
+var styles = [
+  {
+    featureType: "all",
+    stylers: [
+      { saturation: -100 }
+    ]
+  }
+  ];
+  // Create a new StyledMapType object, passing it the array of styles,
+  // as well as the name to be displayed on the map type control.
+  var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+    
+  // Request a map object from Google Maps, and include your list of options
+
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  // Create a location object the represents the latitude and longitude of Chapel Hill
+
+  var location = new google.maps.LatLng(35.913662, -79.054834);    
+
+  // Position the center of the map to the location of Chapel Hill
+
+  map.setCenter(location);
+
+  //Associate the styled map with the MapTypeId and set it to display.
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
+var infowindow = new google.maps.InfoWindow({content:"<p>We're in the McColl Building of the Kenan-Flagler School of Business in Chapel Hill!</p>"});
+
+
+  infowindow.setPosition(location);
+
+infowindow.open(map);
+
+}
+</script>
+
+</head>
+<body>
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<nav class="nav center">
+	<ul>
+		<li class="current"><a href="#">   <img src="images/navicon.jpg" alt="Menu Icon" /></a></li>
+						<li><a href="krisztina.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+
+	</ul>
+</nav>
+   <section id="logo"> <a href="krisztina.html"><img src="images/logo.jpg" alt="Krisztina Kozmetika Logo" /></a> </section>
+
+ <header><h1>Krisztina Kozmetika Spa | Appointments</h1></header> 
+<section id="contact">
+<h2> Use this form to request an appointment, or call us at 919 933-2400</h2>
+<h3> We will respond to you within two days</h3>
+<form action="book.php" method="POST">
+<input type="text" placeholder="Your name" name="text"> <br>
+<input type="email" class="required email" placeholder="Your email" name="email"> <br>
+<input type="text" placeholder="Desired service and time" name="text"> <br>
+ <!--Image courtesy of http://all-free-download.com/free-vector/vector-clip-art/envelope_closed_bw_143963_download.html -->
+<input type="image" src="images/envelope.png"> 
+
+</form>
+
+</section>
+
+<h3> Cancellation Policy </h3>
+<p> Clients who miss a scheduled appointment without giving 24 hour notice by calling 919-933-2400 WILL BE BILLED for the amount of the missed services.
+
+I CAN NOT TAKE CANCELLATION BY EMAIL WITHIN 24 HOURS BECAUSE I DON'T HAVE ACCESS TO INTERNET DURING THE DAY.
+
+Additionally, starting now we will keep a list of clients who do not keep their appointments and only schedule those clients for future appointments with ADVANCE CREDIT CARD PAYMENT. Please understand that until now we have not been very strict about our cancellation policy out of a desire to be accommodating to our clients all the time. There are some clients however who have taken advantage of this leniency, and in order to solve this costly problem, we will strictly adhere to this cancellation policy from now on. In order to avoid discomfort, it would be very considerate of you if you should miss an appointment to call in to volunteer payment. This will save both of us the unpleasantness of our having to contact you to request payment and we will not make exceptions. </p>
+
+<div class="map-wrapper">
+	<div id="map"></div>
+</div> 
+<footer>
+<p> 919 923-6917 | 304 West Weaver Street, Carrboro</p>
+</footer>
+
+
+
+</body>
+
+</html>
+
+
